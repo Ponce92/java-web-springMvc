@@ -17,8 +17,8 @@
 <html class="html">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Registro</title>
-        <spring:url value="/recursos/web/css/inicio.css" var="inicioCss"/>
+        <title> : : Registro</title>
+        <spring:url value="/recursos/web/css/login.css" var="loginCss"/>
         <spring:url value="/recursos/web/frameworks/bootstrap/css/bootstrap.css" var="bootstrap"/>
         <spring:url value="/recursos/web/frameworks/JqueryUI/jquery-ui.css" var="jUi"/>
         
@@ -27,7 +27,7 @@
         <spring:url value="/recursos/web/js/inicio.js" var="inicioJs"/>
         
         
-        <link href="${inicioCss}" rel="stylesheet" />
+        <link href="${loginCss}" rel="stylesheet" />
         <link href="${bootstrap}" rel="stylesheet" />
         <link href="${jUi}" rel="stylesheet" />
         
@@ -36,7 +36,6 @@
         <script src="${inicioJs}"></script>
         
     </head>
- 
     <body>
        
         <nav class="navbar navbar-expand-lg navbar-light" id="nav_bar">
@@ -44,7 +43,7 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
                         <a class="nav-link" href="incio.htm">Inicio<span class="sr-only">(current)</span></a>
@@ -64,65 +63,71 @@
     
                 </ul>  
             </nav>
-   
-        
-                        <!--Fin de la barra de menus -->
+
+        <!--Fin de la barra de menus -->
         
         <div class="container-fluid html">
             <div class="row">
-               <br>
-                <div class="col-sm-offset-0 col-md-1 col-lg-1"></div>
-                <div class="col-xs-12 col-md-10 col-lg-10" >
-                    <form:form modelAttribute="usr" role="form" method="post" action="registro.htm">
-                       
-                        <div class="form-group">
-                            <form:label for="email" path="idUsr">Correo:</form:label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                  <span class="input-group-text">@</span>
+                <div class="col-md-6 offset-md-3 frm">
+                    <div style="height:10vh">
+                        Formulario de registro.
+                    </div>
+                    
+                    <div class="divLog">
+                        <form:form modelAttribute="usr" action=" registro.htm" method="post">
+                            <div class="form-group col-8">
+                                <form:label for="correo" path="idUsr">
+                                E-Mail:    
+                                </form:label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">@</span> 
+                                    </div>                                        
+                                    <form:input path="idUsr" type="email"
+                                                cssClass="form-control" cssErrorClass="form-control is-invalid"
+                                                placeholder="correo@gart.com"
+                                                />
+                                    <form:errors  path="idUsr" element="div"
+                                                  cssClass="invalid-feedback"
+                                                />
                                 </div>
-                                <form:input path="idUsr" type="text" 
-                                        cssClass="form-control"
-                                        cssErrorClass="form-control is-invalid"
-                                        placeholder="email"
-                                 
-                                />
-                                <div class="invalid-feedback">
-                                <form:errors path="idUsr"/>                                                                    
-                                </div>
-
                             </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <form:label for="nombreUsr" path="nombreUsr">
-                                Usuario:
-                            </form:label>
-                            <form:input path="nombreUsr" type="text" 
-                                        cssClass="form-conrol" cssErrorClass="form-control danger-alert"
-                                        placeholder="Usuario"/>
-                            
-                        </div>
-                        
-                        <div class="form-group">
-                        
-                            <form:input type="password" path="claveUsr" cssClass="form-control"
-                                        placeholder="clave"/>
                                 
-                        </div>
-                        <div class="form-group">
-                            <form:select path="roles" class="form-control">
-                                <option value="2">Coleccionista</option>
-                                <option value="3">Artista</option>
-                            </form:select>
-                        </div>
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-default active">Enviar</button>
+                            <div class="form-group col-6">
+                                <form:label for="nombreUsr" path="nombreUsr">
+                                    Nombre de usuario:
+                                </form:label>
+                                <div class="input-group">
+                                    <form:input path="nombreUsr" type="text" cssClass="form-control"
+                                                cssErrorClass="form-control is-invalid" placeholder="usuario"
+                                                />
+                                    <form:errors path="nombreUsr" element="div" cssClass="invalid-feedback"
+                                                />
+                                </div>
                             </div>
-                    </form:form>
+                                
+                            <div class="form-group col-6">
+                                <form:label for="claveUsr" path="claveUsr">
+                                    Clave :
+                                </form:label>
+                                <div class="input-group">
+                                    <form:input path="claveUsr" type="password" cssClass="form-control"
+                                                cssErrorClass="form-control is-invalid"
+                                                />
+                                    <form:errors path="claveUsr" element="div" cssClass="invalid-feedback"
+                                                />
+                                </div>
+                                <br>
+                                <button type="submit" class="btn btn-primary">Registrarse</button>
+                            </div>
+
+                                
+                        </form:form>
+                    </div>
                     
                 </div>
-                <div class="col-sm-offset-0 col-md-1 col-lg-1"></div>
+             
+                       
             </div>
             <div class="row">
                 <div class="col-lg-1"
