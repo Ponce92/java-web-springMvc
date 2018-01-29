@@ -48,5 +48,6 @@ Contributor(s):
     <property name="hibernate.connection.password">ponce</property>
     <mapping resource="modelo/pojo/Roles.hbm.xml"/>
     <mapping resource="modelo/pojo/Usuarios.hbm.xml"/>
+    <mapping resource="modelo/pojo/Personas.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>
