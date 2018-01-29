@@ -13,29 +13,41 @@ import javax.validation.constraints.NotNull;
  */
 public class Usuarios  implements java.io.Serializable {
 
-    private int idUsr;
+    private int id;
     private Roles roles;
     private String nombreUsr;
     private String claveUsr;
     /*
-     *Metos constructores y getter y setter....
+     * Metos constructores y getter y setter....
      */
     public Usuarios() {
     }
 
     public Usuarios(int idUsr, Roles roles, String nombreUsr, String claveUsr) {
-       this.idUsr = idUsr;
+       this.id = idUsr;
        this.roles = roles;
        this.nombreUsr = nombreUsr;
        this.claveUsr = claveUsr;
     }
    
     public int getIdUsr() {
-        return this.idUsr;
+        return this.id;
     }
     
-    public void setIdUsr(int idUsr) {
-        this.idUsr = idUsr;
+    public Usuarios(int idUsr,String nombreUsr, String claveUsr) {
+       this.id = idUsr;
+       this.roles = null;
+       this.nombreUsr = nombreUsr;
+       this.claveUsr = claveUsr;
+    }
+   /*
+    *Fin de constructores de la clase 
+    */
+    public int getId() {
+        return this.id;
+    }
+    public void setId(int id) {
+        this.id = id;
     }
     public Roles getRoles() {
         return this.roles;
@@ -59,7 +71,11 @@ public class Usuarios  implements java.io.Serializable {
         this.claveUsr = claveUsr;
     }
 
-
+    public boolean validarUsr(){
+        boolean vandera=false;
+                
+        return vandera;
+    }
 
 
 }
