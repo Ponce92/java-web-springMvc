@@ -33,6 +33,7 @@
         <script src="${jQuery}"></script>
         <script src="${jqueryUi}"></script>
         <script src="${inicioJs}"></script>
+        <script src="recursos/web/frameworks/bootstrap/js/bootstrap.min.js"></script>
         
     </head>
  
@@ -52,21 +53,64 @@
             </ul>
         </div>
         
-                        <!--Fin de la barra de menus -->
         
+        
+        
+        
+        
+                        <!--Fin de la barra de menus -->
+        <!-- 
+                        row para el carrusel de la aplicacion....
+                    -->
+                    <div class="row">
+                        <div id="carouselExampleIndicators"  class="carousel slide carusel-gart" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+
+                                <div class="carousel-item active">
+                                    <img class="img-fluid" src="recursos/obras/img00.jpg11" alt="First slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="recursos/obras/img01.jpg111" alt="Second slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img  src="recursos/obras/img02.jpgjd" alt="Third slide">
+                                </div>
+
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
         <div class="container-fluid html">
-            <div class="row">
+            <div class="row" style="height: 300px; width: 100%">
                <br>
                 <div class="col-sm-offset-0 col-md-1 col-lg-1"></div>
                 <div class="col-xs-12 col-md-10 col-lg-10" >
-                    <p>${hola}</p>
                     
-                    <c:forEach items="${roles}" var="rol">
-                        <c:out value="${rol.nombreRol}" />
-                    </c:forEach>
-                    
-                 
+                
                     <div class="row ">
+                        
                         <div class="center-block">
                         <div class="cont">
                             <div class="trg clearfix">
