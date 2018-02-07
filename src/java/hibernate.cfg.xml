@@ -6,8 +6,8 @@
     <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/g_art?zeroDateTimeBehavior=convertToNull</property>
-    <property name="hibernate.connection.username">Ponce</property>
-    <property name="hibernate.connection.password">ponce</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">root</property>
     <mapping resource="modelo/pojo/Roles.hbm.xml"/>
     <mapping resource="modelo/pojo/Usuarios.hbm.xml"/><!--Se mapea para que se reconozca la entidad -->
   </session-factory>

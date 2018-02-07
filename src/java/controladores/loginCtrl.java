@@ -5,6 +5,7 @@
  */
 package controladores;
 
+import modelo.forms.UserFrm;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,12 +17,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * @author Administrador
  */
 @Controller
-@RequestMapping("login")
+@RequestMapping("login.htm")
 public class loginCtrl {
     
     @RequestMapping(method=RequestMethod.GET)
-    public String login(Model model){
-        
+    public String Getlogin(Model model){
+        UserFrm usr=new UserFrm();
+        model.addAttribute("usr",usr);
         return "login";
     }
     
